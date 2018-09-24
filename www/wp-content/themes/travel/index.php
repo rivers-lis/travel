@@ -35,48 +35,7 @@
     <?php /*echo $item_post->post_content */?>
 --><?php /*endforeach; */?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>" />
-    
-
-    <script src="<?php bloginfo('template_url') ?>/js/jquery-1.js"></script>
-    <script src="<?php bloginfo('template_url') ?>/js/jquery00.js"></script>
-    <script src="<?php bloginfo('template_url') ?>/js/init0000.js"></script>
-    <title>Untitled Document</title>
-</head>
-
-<body>
-<div class="main">
-    <div class="head">
-        <h2>Выбери своё <br />Путешествие</h2>
-        <a href="/"><span>C</span>hoose <span>T</span>ravel</a>
-    </div>
-
-    <div class="content-main">
-        <ul class="menu">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Автор</a></li>
-            <li><a href="#">Контакты</a></li>
-            <form class="search-main" action="" method="">
-                <input class="serch-txt" type="text" name="search" />
-                <input class="serch-btn" type="image" src="<?php bloginfo('template_url') ?>/images/serach-btn.jpg" />
-            </form>
-        </ul>
-
-        <div id="slider">
-            <ul id="cycle">
-                <li><img src="<?php bloginfo('template_url') ?>/images/galery.jpg" height="266" width="927" alt="Slides" /></li>
-                <li><img src="<?php bloginfo('template_url') ?>/images/kolizey.jpg" height="266" width="927" alt="Slides" /></li>
-                <li><img src="<?php bloginfo('template_url') ?>/images/piramide.jpg" height="266" width="927" alt="Slides" /></li>
-                <li><img src="<?php bloginfo('template_url') ?>/images/galery.jpg" height="266" width="927" alt="Slides" /></li>
-                <li><img src="<?php bloginfo('template_url') ?>/images/kolizey.jpg" height="266" width="927" alt="Slides" /></li>
-                <li><img src="<?php bloginfo('template_url') ?>/images/piramide.jpg" height="266" width="927" alt="Slides" /></li>
-            </ul>
-            <div id="cyclePager"></div>
-        </div>
+<?php get_header(); ?>
         <div class="content">
             <div class="post-main">
                 <h1><a href="#">Букингемский дворец</a> <span>(10.08.2011)</span></h1>
@@ -134,48 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="sidebar">
-            <div class="vidget">
-                <h2>Категории</h2>
-                <ul>
-                    <li>- <a href="#">Италия</a></li>
-                    <li>- <a href="#">Германия</a></li>
-                    <li>- <a href="#">Франция</a></li>
-                    <li>- <a href="#">Великобритания</a></li>
-                    <li>- <a href="#">Египет</a></li>
-                    <li>- <a href="#">АОЭ</a></li>
-                </ul>
-            </div>
-        </div>
+<?php get_sidebar(); ?>
     </div>
 
-    <div class="footer">
-        <div class="cpy">
-            <a href="/"><span>C</span>hoose <span>T</span>ravel</a>
-            <p>Chooce Travel 2011<br />
-                Все права зашишены.<br />
-                Email: contact@chooseTravel.ru</p>
-        </div>
-        <div class="menu-foot">
-            <h2>Категории</h2>
-            <ul>
-                <li>- <a href="#">Италия</a></li>
-                <li>- <a href="#">Германия</a></li>
-                <li>- <a href="#">Франция</a></li>
-                <li>- <a href="#">Великобритания</a></li>
-                <li>- <a href="#">Египет</a></li>
-                <li>- <a href="#">АОЭ</a></li>
-            </ul>
-        </div>
-        <div class="menu-foot">
-            <h2>Страницы</h2>
-            <ul>
-                <li>- <a href="#">Главная</a></li>
-                <li>- <a href="#">Автор</a></li>
-                <li>- <a href="#">Контакты</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+<?php get_footer(); ?>
