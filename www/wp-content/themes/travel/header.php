@@ -2,12 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>" />
 
-
-	<script src="<?php bloginfo('template_url') ?>/js/jquery-1.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/jquery00.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/init0000.js"></script>
 	<title><?php bloginfo('name'); wp_title(); ?></title>
 	<?php wp_head(); ?>
 </head>
