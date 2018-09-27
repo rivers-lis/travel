@@ -15,4 +15,39 @@ function load_style_script() {
  * */
 add_action('wp_enqueue_scripts', 'load_style_script');
 
+/*
+ * поддержка миниатюр
+ * */
+add_theme_support('post-thumbnails');
+
+/*
+ * меню
+ * */
+register_nav_menu('menu', 'Меню');
+
+/*
+ * сайтбар
+ * */
+register_sidebar(array(
+	'name' => 'Виджеты сайдбара',
+	'id' => 'sidebar',
+	'description' => 'Здесь размещайте виджеты сайдбара',
+	'before_widget' => '<div class="vidget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>'
+));
+
+/*
+ * футер
+ * */
+register_sidebar(array(
+	'name' => 'Виджеты футера',
+	'id' => 'footer',
+	'description' => 'Здесь размещайте виджеты футера',
+	'before_widget' => '<div class="menu-foot">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>'
+));
 ?>

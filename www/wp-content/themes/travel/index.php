@@ -43,10 +43,10 @@
                 <div class="post-main">
                     <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span>(<?php the_time('d.m.Y'); ?>)</span></h1>
                     <div class="post">
-                        <img src="<?php bloginfo('template_url') ?>/images/palice.jpg" class="imgstyle" alt="Букингемский дворец" />
+                        <?php the_post_thumbnail('full', 'class=imgstyle'); ?>
                         <?php the_excerpt(); ?>
                         <p><a href="<?php the_permalink(); ?>">Читать далее</a></p>
-                        <p>Метки: <a href="#">Аглия</a>, <a href="#">Замки</a>, <a href="#">Дворец</a></p>
+                        <p><?php the_tags(); ?></p>
                     </div>
                 </div>
 

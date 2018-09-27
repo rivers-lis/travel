@@ -50,7 +50,7 @@ body{
 				font:18px "Century Gothic"; color:#fff; text-decoration:underline;
 				}		
 	.search-main{
-		float:right; margin: 0 25px 0 0;
+		float:right; margin: -50px 25px 0 0;
 		}		
 		.serch-txt{
 			height:23px; border:1px solid #fff; width:230px; margin: 0 10px 0 0;
@@ -212,3 +212,10 @@ body{
 
 	#cyclePager a:hover,
 	#cyclePager a.activeSlide{background-position: -17px 0;}
+
+	.page-title{
+		margin: 0 0 20px 0;
+		color: #3F282f;
+		font: 20px Verdana;
+		border-bottom: 1px dashed #ccc;
+	}
