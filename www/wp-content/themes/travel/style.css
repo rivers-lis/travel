@@ -219,3 +219,28 @@ body{
 		font: 20px Verdana;
 		border-bottom: 1px dashed #ccc;
 	}
+
+	/* Pagination */
+	.pagination{
+		margin: 20px;
+	}
+	.pagination span,
+	.pagination a{
+		background: #3F282F;
+		color: #fff;
+		padding: 6px 12px;
+		text-decoration: none;
+		margin: 0;
+		border-radius: 5px;
+	}
+	.pagination span.current{
+		background: #6E4652;
+		color: #fff;
+		border-radius: 5px;
+	}
+	.pagination a:hover{
+		background: #6E4652;
+	}
+	.pagination span.dots{
+		border: none;
+	}
