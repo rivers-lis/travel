@@ -29,14 +29,36 @@
 
 		</ul>-->
 
-		<div id="slider">
+        <?php $slider = new WP_Query(array('post_type' => 'slider', 'posts_per_page' => -1, 'order' => 'ASC')); ?>
+
+        <?php if ($slider->have_posts()) : ?>
+
+            <div id="slider">
+                <ul id="cycle">
+
+        <?php while ($slider->have_posts()) : $slider->the_post(); ?>
+            <li><?php the_post_thumbnail('full'); ?></li>
+        <!-- post -->
+        <?php endwhile; ?>
+            </ul>
+                <div id="cyclePager"></div>
+            </div>
+        <!-- post navigation -->
+        <?php else: ?>
+            <p>Место под слайдер</p>
+        <!-- no posts found -->
+        <?php endif; ?>
+        <?php wp_reset_query(); ?>
+
+
+		<!--<div id="slider">
 			<ul id="cycle">
-				<li><img src="<?php bloginfo('template_url') ?>/images/galery.jpg" height="266" width="927" alt="Slides" /></li>
-				<li><img src="<?php bloginfo('template_url') ?>/images/kolizey.jpg" height="266" width="927" alt="Slides" /></li>
-				<li><img src="<?php bloginfo('template_url') ?>/images/piramide.jpg" height="266" width="927" alt="Slides" /></li>
-				<li><img src="<?php bloginfo('template_url') ?>/images/galery.jpg" height="266" width="927" alt="Slides" /></li>
-				<li><img src="<?php bloginfo('template_url') ?>/images/kolizey.jpg" height="266" width="927" alt="Slides" /></li>
-				<li><img src="<?php bloginfo('template_url') ?>/images/piramide.jpg" height="266" width="927" alt="Slides" /></li>
+				<li><img src="<?php /*bloginfo('template_url') */?>/images/galery.jpg" height="266" width="927" alt="Slides" /></li>
+				<li><img src="<?php /*bloginfo('template_url') */?>/images/kolizey.jpg" height="266" width="927" alt="Slides" /></li>
+				<li><img src="<?php /*bloginfo('template_url') */?>/images/piramide.jpg" height="266" width="927" alt="Slides" /></li>
+				<li><img src="<?php /*bloginfo('template_url') */?>/images/galery.jpg" height="266" width="927" alt="Slides" /></li>
+				<li><img src="<?php /*bloginfo('template_url') */?>/images/kolizey.jpg" height="266" width="927" alt="Slides" /></li>
+				<li><img src="<?php /*bloginfo('template_url') */?>/images/piramide.jpg" height="266" width="927" alt="Slides" /></li>
 			</ul>
 			<div id="cyclePager"></div>
-		</div>
+		</div>-->
