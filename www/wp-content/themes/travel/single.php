@@ -12,10 +12,13 @@
 				</div>
 			</div>
 
+            <?php comments_template(); ?>
+
 			<!-- post -->
 		<?php endwhile; ?>
 			<!-- post navigation -->
 		<?php else: ?>
+            <p>Здесь ничего нет...</p>
 			<!-- no posts found -->
 		<?php endif; ?>
 
